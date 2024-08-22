@@ -3,8 +3,8 @@
 #### Technical Skills: ML/AI, TensorFlow, PyTorch, Keras, Python, C++, Qiskit, FORTRAN, Linux OS, JAVA, MATLAB, ROOT, Deep Learning, Convolutional Neural Network, Deep Neural Network, Quantum Information, Data Analysis, Statistics, Cloud Computation, MS Office
 
 ## Education
-- Ph.D., Physics | The University Alabama ,Tuscaloosa (_Dec 2026_)								       		
-- M.S., Physics	| Odisha University of Agriculture and Techn0logy (_July 2019_)	 			        		
+- Ph.D, Physics | The University Alabama ,Tuscaloosa (_Dec 2026_)								       		
+- M.S, Physics	| Odisha University of Agriculture and Techn0logy (_July 2019_)	 			        		
 
 ## Research Experience
 **Graduate Studentt @ University of Alabama (_August 2021 - Present_)**
