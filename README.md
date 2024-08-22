@@ -49,7 +49,7 @@
 ![Decision Tree](/assets/dt.png)
 
 ## Certifications
-- Programme On Young Graduates For Leadership In Biotechnology - 2017 ![link]{
+- Programme On Young Graduates For Leadership In Biotechnology - 2017 
 - Awarded by Odisha Medhabruti 2017
 - Machine Learning for Science(ML4SCI) hackathon competition winner - 2020
 - UJK Doctoral Forum Certificate - 2020
