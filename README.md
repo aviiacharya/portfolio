@@ -9,7 +9,7 @@
 ## Research Experience
 **Graduate Studentt @ University of Alabama (_August 2021 - Present_)**
 - Built a CNN classifier for Higgs image dataset with 97% accuracy with and without tracker(86%) information at CMS experiment, CERN in 1st year.
-- Trained and continuing different E2E Resnet models with a 90% accuracy for 2x-pseudoscalar particles from Higgs boson mass regression using low level particle information by setting up 3 different cloud computers with GPUs in 2nd year.
+- Trained and tested different E2E Resnet models with a 90% accuracy for 2x-pseudoscalar particles from Higgs boson mass regression using low level particle information by setting up 3 different cloud computers with GPUs in 2nd year.
   
 **Student Researcher (_October 2019 - July 2021_)**
 - Employed C++ to analyze complex datasets at NA61/SHINE experiment at CERN SPS, extracting 95% insights, implementing intermittency analysis to study the Critical Point of Quark-Gluon-Plasma.
