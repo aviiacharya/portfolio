@@ -6,7 +6,7 @@
 - Ph.D., Physics | The University Alabama ,Tuscaloosa (_Dec 2026_)								       		
 - M.S., Physics	| Odisha University of Agriculture and Techn0logy (_July 2019_)	 			        		
 
-### Research Experience
+## Research Experience
 **Graduate Studentt @ University of Alabama (_August 2021 - Present_)**
 - Built a CNN classifier for Higgs image dataset with 97% accuracy with and without tracker(86%) information at CMS experiment, CERN in 1st year.
 - Trained and continuing different E2E Resnet models with a 90% accuracy for 2x-pseudoscalar particles from Higgs boson mass regression using low level particle information by setting up 3 different cloud computers with GPUs in 2nd year.
@@ -56,6 +56,8 @@
 - Womanium QWorld Quantum Computing and Programming Diploma Certificate - 2022
 - Best Start up idea - Quantum computation hackathon by Womanium and QWorld - 2022
 - Womanium Quantum Hardware certificate - 2022
+
+[Poet Abhipsa](https://medium.com/@abhipsa_acharya)
 
 ![University of Alabama](/UALOGO.png)
 
