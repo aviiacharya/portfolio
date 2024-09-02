@@ -46,7 +46,12 @@
 - Wrote and tuned 2 machine learning models: a boosted decision tree with 400 estimators and a deep neural network with 7 layers, achieving 80% validation accuracy.
 - Trained the models over 50 epochs, reducing learning rates from 0.001 to 0.00004 while tracking performance with ROC 87% curves and confusion matrices across 3,500 validation samples.
 
-![Decision Tree](/assets/dt.png)
+![Decision Tree](/assets/tree.png)
+
+### Photon and Electron Classification Using Deep Learning with and w/o tracker info
+- Achieved 94.7% accuracy in photon and electron classification for the CMS detector's barrel region using deep neural networks on a test set of 370,962 samples.
+- Processed 1.8M+ data points with Python libraries (TensorFlow, Keras, Uproot) for data handling and model training.
+- Engineered 14 features and optimized model performance with dropout regularization, learning rate reduction, and early stopping techniques.
 
 ## Certifications
 - Programme On Young Graduates For Leadership In Biotechnology - 2017 
