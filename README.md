@@ -65,8 +65,8 @@ My study focuses on determining the mass of the top quark using an end-to-end de
 - Best Start up idea - Quantum computation hackathon by Womanium and QWorld - 2022
 - Womanium Quantum Hardware certificate - 2022
 
-[Publications](https://www.researchgate.net/profile/Abhipsa-Acharya)
-[Poet Abhipsa](https://medium.com/@abhipsa_acharya)
+![Publications](https://www.researchgate.net/profile/Abhipsa-Acharya)
+![Poet-Abhipsa](https://medium.com/@abhipsa_acharya)
 
 ## Feel free to connect with me!
 
