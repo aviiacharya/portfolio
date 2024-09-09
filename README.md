@@ -1,5 +1,8 @@
 # Graduate Student
 
+## Research Abstract
+My study focuses on determining the mass of the top quark using an end-to-end deep learning approach, primarily with a residual neural network for boosted top quark mass regression. Utilizing proton-proton collision data (√s = 13 TeV) from the CMS experiment at the LHC, we analyze fully-hadronic decays with detailed tracking and calorimeter information. Machine learning models are trained on Monte Carlo simulated data to distinguish between top quarks from weak interactions and gluon fusion. The study further extends to probe quantum entanglement in top quark production, using the spin-dependent parts of the production matrix and analyzing semi-leptonic decay events.
+
 #### Technical Skills: ML/AI, TensorFlow, PyTorch, Keras, Python, C++, Qiskit, FORTRAN, Linux OS, JAVA, MATLAB, ROOT, Deep Learning, Convolutional Neural Network, Deep Neural Network, Quantum Information, Data Analysis, Statistics, Cloud Computation, MS Office
 
 ## Education
@@ -62,9 +65,16 @@
 - Best Start up idea - Quantum computation hackathon by Womanium and QWorld - 2022
 - Womanium Quantum Hardware certificate - 2022
 
+[Publications](https://www.researchgate.net/profile/Abhipsa-Acharya)
 [Poet Abhipsa](https://medium.com/@abhipsa_acharya)
 
-![University of Alabama](/UALOGO.png)
+## Feel free to connect with me!
+
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:aacharya1@crimson.ua.edu)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white)](https://github.com/aviiacharya)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/travel_with_abhipsa/)
+
+![University of Alabama](/UALOGO.png) 
 
 
 
