@@ -73,8 +73,8 @@ My study focuses on determining the mass of the top quark using an end-to-end de
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:aacharya1@crimson.ua.edu)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white)](https://github.com/aviiacharya)
-[![LinkedIn](https://www.linkedin.com/in/abhipsa-acharya-1abba71a4/)
-[![ResearchGate](https://www.researchgate.net/profile/Abhipsa-Acharya)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhipsa-acharya-1abba71a4/)
+[![ResearchGate](https://img.shields.io/badge/ResearchGate-00B2FF?style=for-the-badge&logo=messenger&logoColor=white)](https://www.researchgate.net/profile/Abhipsa-Acharya)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/travel_with_abhipsa/)
 
 
