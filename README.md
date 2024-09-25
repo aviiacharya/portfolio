@@ -56,7 +56,7 @@ My study focuses on determining the mass of the top quark using an end-to-end de
 
 ![Decision Tree](/assets/tree.png)
 
-### Photon and Electron Classification Using Deep Learning with and w/o tracker info ![Link](https://github.com/aviiacharya/Electron-and-Photon-classification-using-NNs-with-and-without-detector-tracker-info)
+### Photon and Electron Classification Using Deep Learning with and w/o tracker info [Link](https://github.com/aviiacharya/Electron-and-Photon-classification-using-NNs-with-and-without-detector-tracker-info)
 - Achieved 94.7% accuracy in photon and electron classification for the CMS detector's barrel region using deep neural networks on a test set of 370,962 samples.
 - Processed 1.8M+ data points with Python libraries (TensorFlow, Keras, Uproot) for data handling and model training.
 - Engineered 14 features and optimized model performance with dropout regularization, learning rate reduction, and early stopping techniques.
