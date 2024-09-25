@@ -7,7 +7,7 @@ My study focuses on determining the mass of the top quark using an end-to-end de
 #### Technical Skills: ML/AI, TensorFlow, PyTorch, Keras, Python, C++, Qiskit, FORTRAN, Linux OS, JAVA, MATLAB, ROOT, Deep Learning, Convolutional Neural Network, Deep Neural Network, Quantum Information, Data Analysis, Statistics, Cloud Computation, MS Office, Docker
 
 ## Education
-- Ph.D, Physics | The University of Alabama ,Tuscaloosa [Primary Research Plan](https://drive.google.com/file/d/1RRsIO2vIhgnPeQgKDPnwEc92JminMqJU/view?usp=sharing)(_Dec 2026_)			
+- Ph.D, Physics | The University of Alabama ,Tuscaloosa [Primary Research Plan](https://drive.google.com/file/d/1RRsIO2vIhgnPeQgKDPnwEc92JminMqJU/view?usp=sharing) (_Dec 2026_)			
 - M.S, Physics	| Odisha University of Agriculture and Technology [Thesis Report](https://drive.google.com/file/d/1H5xK6hwNT2X3dFbX-xBKyLf0fzAcHjFq/view?usp=sharing) (_July 2019_)	 			        		
 
 ## Research Experience 
