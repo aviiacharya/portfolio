@@ -2,7 +2,7 @@
 
 
 ### Research Abstract 
-My study focuses on determining the mass of the top quark using an end-to-end deep learning approach, primarily with a residual neural network for boosted top quark mass regression. Utilizing proton-proton collision data (√s = 13 TeV) from the CMS experiment at the LHC, we analyze fully-hadronic decays with detailed tracking and calorimeter information. Machine learning models are trained on Monte Carlo simulated data to distinguish between top quarks from weak interactions and gluon fusion. The study further extends to probe quantum entanglement in top quark production, using the spin-dependent parts of the production matrix and analyzing semi-leptonic decay events.
+My study focuses on determining the mass of the top quark using an end-to-end deep learning approach, primarily with a residual neural network for boosted top quark mass regression. Utilizing proton-proton collision data (√s = 13 TeV) from the CMS experiment at the LHC, we analyze fully-hadronic decays with detailed tracking and calorimeter information. Machine learning models are trained on Monte Carlo simulated data to distinguish between top quarks from weak interactions and gluon fusion. The study further extends to probe quantum entanglement in top quark production analyzing semi-leptonic, dileptonic decay events.
 
 #### Technical Skills: ML/AI, TensorFlow, PyTorch, Keras, Python, C++, Qiskit, FORTRAN, Linux OS, JAVA, MATLAB, ROOT, Deep Learning, Convolutional Neural Network, Deep Neural Network, Quantum Information, Data Analysis, Statistics, Cloud Computation, MS Office, Docker
 
