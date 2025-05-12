@@ -61,6 +61,13 @@ My study focuses on determining the mass of the top quark using an end-to-end de
 - Processed 1.8M+ data points with Python libraries (TensorFlow, Keras, Uproot) for data handling and model training.
 - Engineered 14 features and optimized model performance with dropout regularization, learning rate reduction, and early stopping techniques.
 
+### Sales Data Analysis Using Panda [Link](https://github.com/aviiacharya/Sales-Data-Analysis-Pandas)
+- Processed and analyzed over 18,000 rows of real-world sales data using Pandas, achieving a 100% automated pipeline for data cleaning, transformation, and analysis.
+- Engineered features such as Month, City, and Hour to uncover sales patterns; identified a 35% sales spike during peak evening hours and top revenue-generating cities.
+- Visualized trends with Matplotlib and Seaborn, enabling insights into product bundling opportunities and boosting category-level sales strategy.
+
+ ![Sales Analysis](assets/sales-data-portfolio-image.jpg) 
+
 ## Certifications
 - Womanium QWorld Quantum Computing and Programming Diploma Certificate - 2022 [Link](https://drive.google.com/file/d/1DDVGa6TxbmjDut8Uch_jPUrhfRNx-uR3/view?usp=sharing)
 - Best Start up idea - Quantum computation hackathon by Womanium and QWorld - 2022 [Link](https://drive.google.com/file/d/13fbQHcNHYj0iyE_Wb-hJT7Wt0q_lj4CZ/view?usp=sharing)
