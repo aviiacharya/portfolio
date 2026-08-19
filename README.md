@@ -2,19 +2,24 @@
 
 
 ### Research Abstract 
-My study focuses on determining the mass of the top quark using an end-to-end deep learning approach, primarily with a residual neural network for boosted top quark mass regression. Utilizing proton-proton collision data (√s = 13 TeV) from the CMS experiment at the LHC, we analyze fully-hadronic decays with detailed tracking and calorimeter information. Machine learning models are trained on Monte Carlo simulated data to distinguish between top quarks from weak interactions and gluon fusion. The study further extends to probe quantum entanglement in top quark production analyzing semi-leptonic, dileptonic decay events.
+My research focuses on two analyses with the CMS experiment at the LHC. I am searching for pair-produced vector-like top quarks decaying through a new neutral scalar S0 (S0 → γγ) in the single-lepton final state at 13 TeV, targeting a channel unexplored by existing VLQ searches and using the diphoton mass resonance as the main discriminant. Separately, I am measuring quantum entanglement in boosted top quark pair production at 13.6 TeV using Run 3 data, extracting spin correlations via the D coefficient and developing a ParticleNet-based flavor tagging approach to improve the spin analyzing power.
 
-#### Technical Skills: ML/AI, TensorFlow, PyTorch, Keras, Python, C++, Qiskit, FORTRAN, Linux OS, JAVA, MATLAB, ROOT, Deep Learning, Convolutional Neural Network, Deep Neural Network, Quantum Information, Data Analysis, Statistics, Cloud Computation, MS Office, Docker
+#### Technical Skills: Python, C++, C, Fortran, PyTorch, TensorFlow, Keras, Qiskit, D-Wave, Pennylane, ROOT, CMSSW, Coffea, NanoAOD-tools, ParticleNet, DNN/CNN/RNN/Transformer architectures, Diffusion models, Vision Transformers, Statistical Analysis, Big Data Processing, Monte Carlo Simulation, HTCondor, CRAB, Slurm, LPC/LXplus, SWAN, Matlab, Mathematica, LaTeX, Beamer, Docker, Git, Linux/Unix, Anaconda
 
 ## Education
-- Ph.D, Physics | The University of Alabama ,Tuscaloosa [Primary Research Plan](https://drive.google.com/file/d/1RRsIO2vIhgnPeQgKDPnwEc92JminMqJU/view?usp=sharing) (_Dec 2026_)			
-- M.S, Physics	| Odisha University of Agriculture and Technology [Thesis Report](https://drive.google.com/file/d/1H5xK6hwNT2X3dFbX-xBKyLf0fzAcHjFq/view?usp=sharing) (_July 2019_)	 			        		
+- Ph.D, Physics | The University of Alabama ,Tuscaloosa (_April 2028_)			
+- M.S, Physics	| Odisha University of Agriculture and Technology [Thesis Report](https://drive.google.com/file/d/1H5xK6hwNT2X3dFbX-xBKyLf0fzAcHjFq/view?usp=sharing) (_July 2019_)
+- B.S, Physics  |	Utkal University (_July 2017_)	        		
 
 ## Research Experience 
 **Graduate Studentt @ University of Alabama (_August 2021 - Present_)** 
-- Built a CNN classifier for Higgs image dataset with 97% accuracy with and without tracker(86%) information at CMS experiment, CERN in 1st year.
-- Trained and tested different E2E Resnet models with a 90% accuracy for 2x-pseudoscalar particles from Higgs boson mass regression using low level particle information by setting up 3 different cloud computers with GPUs in 2nd year.
-  
+- Built a CNN classifier for Higgs image dataset with 97% accuracy with and without tracker(86%) information at CMS experiment, CERN.
+- Trained and tested different E2E Resnet models with a 90% accuracy for 2x-pseudoscalar particles from Higgs boson mass regression using low level particle information by setting up 3 different cloud computers with GPUs.
+- Designed and implemented a columnar analysis framework for measuring quantum entanglement in boosted tt̄ production, processing terabyte-scale CMS Run 3 data with multi-category event selection (AK8 top-tagging, b-jet classification), automated MC normalization, and Data/MC validation at 26.67 fb⁻¹.
+- Led end-to-end development of a rare-signal search pipeline: Monte Carlo signal production, BSM decay characterization, and resonance-based signal discrimination in LHC collision data, with planned integration of ML-based classifiers for signal extraction.
+- Building a system that continuously measures moisture levels in a lab environment(M5Stack) using industrial vaisala sensors, logs the data automatically, and displays it on a live dashboard - Setting up independent PC based dew point monitoring for the HGCAL MMTTs.
+- 
+   
 **Student Researcher @ CERN NA61/SHINE experiment (_October 2019 - July 2021_)** [Preliminary Release](https://indico.cern.ch/event/1048050/contributions/4403020/attachments/2261228/3840950/Collab_Release_Abhipsa(1).pdf)
 - Employed C++ to analyze complex datasets at NA61/SHINE experiment at CERN SPS, extracting 95% insights, implementing intermittency analysis to study the Critical Point of Quark-Gluon-Plasma.
 - Utilized Python for reconstructed SHINE software and manipulating data of tracking devices for 100% streamlined processes efficiency.
@@ -31,6 +36,11 @@ My study focuses on determining the mass of the top quark using an end-to-end de
 - Developed graphical skills using Matlab, Mathematica, GNU plot, and Origin for various tasks of oscillating flavored particles.
 
 ## Projects
+### Hybrid quantum-classical contrastive learning for quark/gluon jet classification[Link](https://github.com/aviiacharya/Contrastive_Learning)
+- Built a hybrid pipeline combining a PointVector encoder with a 6-qubit variational quantum circuit (amplitude embedding, ZXZ ansatz, ring + skip CNOTs) for quark/gluon jet classification on 100k Pythia8 jets via EnergyFlow.
+- Implemented physics-motivated augmentations (phi-rotation, pT-biased dropout, pT smearing, translation) with SimCLR/NT-Xent contrastive pretraining, evaluated via frozen-encoder logistic regression.
+- Achieved test AUC of 0.858 with the quantum hybrid (54 trainable gate parameters) trained on 80k samples, within 0.4% of the classical-only baseline (0.862 AUC, 815k parameters).
+
 ### End-to-end quantum simulation of space telescopes (feat. teleportation) @ Womanium Hackathon [Link](https://github.com/aviiacharya/Predict-the-orbit-of-the-James-Webb-space-telescope-with-a-quantum-algorithm---Herman-Kolden)
 - Developed a quantum teleportation model for satellite-to-Earth communication using entangled photonic qubits encoded via polarization states.
 - Designed a theoretical satellite system in a sun-synchronous orbit to transmit quantum states and classical bits for space telescope simulations.
@@ -77,7 +87,7 @@ My study focuses on determining the mass of the top quark using an end-to-end de
 - Programme On Young Graduates For Leadership In Biotechnology - 2017 
 - Awarded by Odisha Medhabruti 2017 
 
-[Publications](https://www.researchgate.net/profile/Abhipsa-Acharya)
+[Publications](https://scholar.google.com/citations?user=JJmsBB4AAAAJ&hl=en)
 [Poet-Abhipsa](https://medium.com/@abhipsa_acharya)
 
 ## Feel free to connect with me!
