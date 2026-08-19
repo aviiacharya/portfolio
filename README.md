@@ -36,7 +36,10 @@ My research focuses on two analyses with the CMS experiment at the LHC. I am sea
 - Developed graphical skills using Matlab, Mathematica, GNU plot, and Origin for various tasks of oscillating flavored particles.
 
 ## Projects
-### Hybrid quantum-classical contrastive learning for quark/gluon jet classification[Link](https://github.com/aviiacharya/Contrastive_Learning)
+
+![Contrastive Learning](assets/6d86890e-d4a0-4dbd-926b-1d2a10b0dcba.png)
+
+### Hybrid quantum-classical contrastive learning for quark/gluon jet classification @ UA [Link](https://github.com/aviiacharya/Contrastive_Learning)
 - Built a hybrid pipeline combining a PointVector encoder with a 6-qubit variational quantum circuit (amplitude embedding, ZXZ ansatz, ring + skip CNOTs) for quark/gluon jet classification on 100k Pythia8 jets via EnergyFlow.
 - Implemented physics-motivated augmentations (phi-rotation, pT-biased dropout, pT smearing, translation) with SimCLR/NT-Xent contrastive pretraining, evaluated via frozen-encoder logistic regression.
 - Achieved test AUC of 0.858 with the quantum hybrid (54 trainable gate parameters) trained on 80k samples, within 0.4% of the classical-only baseline (0.862 AUC, 815k parameters).
