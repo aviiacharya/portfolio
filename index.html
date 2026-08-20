@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhipsa Acharya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream: #faf8f4;
+  --warm-white: #f2efe8;
+  --sand: #e8e3d8;
+  --charcoal: #2a2a2a;
+  --text: #3d3d3d;
+  --text-secondary: #6b6560;
+  --terracotta: #a0522d;
+  --deep-rust: #8b3a2a;
+  --muted-gold: #b49a5e;
+  --rule: #cdc5b4;
+  --sage: #7a9e7e;
+  --dusty-blue: #6b8ea4;
+  --plum: #8e6585;
+  --warm-coral: #d4856a;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Source Sans 3', 'Helvetica Neue', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.75;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--terracotta); text-decoration: none; }
+a:hover { color: var(--deep-rust); }
+
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 100;
+  background: rgba(250, 248, 244, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--sand);
+}
+
+nav .nav-inner {
+  max-width: 1060px; margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+nav .name-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem; font-weight: 600; color: var(--charcoal);
+}
+
+nav .nav-links { display: flex; gap: 28px; list-style: none; }
+
+nav .nav-links a {
+  font-size: 0.82rem; font-weight: 500; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--text-secondary); transition: color 0.2s;
+  position: relative;
+}
+
+nav .nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0; width: 100%;
+  height: 1.5px; background: var(--terracotta);
+  transform: scaleX(0); transform-origin: right; transition: transform 0.3s ease;
+}
+
+nav .nav-links a:hover { color: var(--terracotta); }
+nav .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--charcoal); margin: 5px 0; }
+
+@media (max-width: 680px) {
+  .hamburger { display: block; }
+  nav .nav-links {
+    display: none; flex-direction: column; position: absolute; top: 100%;
+    left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--sand);
+    padding: 20px 32px; gap: 16px;
+  }
+  nav .nav-links.open { display: flex; }
+}
+
+.wide { max-width: 1060px; margin: 0 auto; padding: 0 32px; }
+.narrow { max-width: 720px; margin: 0 auto; padding: 0 32px; }
+section { padding: 80px 0 48px; }
+
+.section-eyebrow {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted-gold); margin-bottom: 8px;
+}
+
+.section-heading {
+  font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600;
+  color: var(--charcoal); margin-bottom: 12px; line-height: 1.2;
+}
+
+.section-rule {
+  width: 48px; height: 2px; margin-bottom: 36px;
+  background: linear-gradient(90deg, var(--terracotta), var(--muted-gold));
+  transition: width 0.4s ease;
+}
+
+.fade-in.visible .section-rule { width: 64px; }
+
+/* HERO */
+.hero {
+  min-height: 100vh; display: flex; align-items: center; padding-top: 60px;
+  background: linear-gradient(135deg, var(--warm-white) 0%, #f0ece2 40%, #eee8df 70%, var(--cream) 100%);
+  position: relative; overflow: hidden;
+}
+
+.hero::before {
+  content: ''; position: absolute; top: -120px; right: -120px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(180, 154, 94, 0.08) 0%, transparent 70%);
+  animation: float-orb 8s ease-in-out infinite;
+}
+
+.hero::after {
+  content: ''; position: absolute; bottom: -80px; left: -60px;
+  width: 300px; height: 300px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(160, 82, 45, 0.06) 0%, transparent 70%);
+  animation: float-orb 10s ease-in-out infinite reverse;
+}
+
+@keyframes float-orb {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -25px); }
+}
+
+.hero-layout { display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: center; }
+
+@media (max-width: 700px) {
+  .hero-layout { grid-template-columns: 1fr; text-align: center; gap: 36px; }
+}
+
+.hero-photo-wrap { position: relative; }
+.hero-photo-wrap::before {
+  content: ''; position: absolute; top: 8px; left: 8px; right: -8px; bottom: -8px;
+  border: 2px solid var(--muted-gold); z-index: 0;
+  transition: all 0.4s ease;
+}
+
+.hero-photo-wrap:hover::before {
+  top: 12px; left: 12px; right: -12px; bottom: -12px;
+  border-color: var(--terracotta);
+}
+
+.hero-photo {
+  transition: filter 0.4s ease;
+}
+
+.hero-photo-wrap:hover .hero-photo {
+  filter: grayscale(0%) contrast(1.08);
+}
+
+.hero-photo {
+  width: 220px; height: 270px; object-fit: cover; position: relative; z-index: 1;
+  filter: grayscale(15%) contrast(1.05); transition: filter 0.4s ease;
+}
+
+@media (max-width: 700px) {
+  .hero-photo-wrap { margin: 0 auto; width: 180px; }
+  .hero-photo { width: 180px; height: 220px; }
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700;
+  line-height: 1.1; color: var(--charcoal); margin-bottom: 12px;
+}
+
+@media (max-width: 700px) { .hero-text h1 { font-size: 2.2rem; } }
+
+.hero-text .affiliation {
+  font-size: 0.9rem; font-weight: 500; color: var(--terracotta);
+  text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px;
+}
+
+.hero-text .abstract { font-size: 1.05rem; line-height: 1.85; color: var(--text); max-width: 560px; }
+.hero-text .abstract em { font-style: italic; color: var(--charcoal); font-weight: 500; }
+
+.hero-links { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 700px) { .hero-links { justify-content: center; } }
+
+.btn-outline {
+  font-size: 0.8rem; font-weight: 500; padding: 8px 20px; border: 1.5px solid var(--charcoal);
+  color: var(--charcoal); text-transform: uppercase; letter-spacing: 0.06em;
+  transition: all 0.3s ease; position: relative; overflow: hidden;
+}
+
+.btn-outline::before {
+  content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+  background: var(--charcoal); transition: left 0.3s ease; z-index: 0;
+}
+
+.btn-outline:hover::before { left: 0; }
+.btn-outline:hover { color: var(--cream); border-color: var(--charcoal); }
+.btn-outline span, .btn-outline { position: relative; z-index: 1; }
+
+.editorial-divider {
+  text-align: center; padding: 24px 0; color: var(--rule);
+  font-family: 'Playfair Display', serif; font-size: 1.4rem; letter-spacing: 0.4em;
+}
+
+/* RESEARCH */
+.research-pair {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--sand); border: 1px solid var(--sand);
+}
+
+@media (max-width: 700px) { .research-pair { grid-template-columns: 1fr; } }
+
+.research-item {
+  background: var(--cream); padding: 36px 32px; cursor: pointer;
+  transition: all 0.3s ease; border-left: 3px solid transparent;
+}
+
+.research-item:first-child:hover { background: var(--warm-white); border-left-color: var(--dusty-blue); }
+.research-item:last-child:hover { background: var(--warm-white); border-left-color: var(--plum); }
+
+.research-item .r-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.12em; color: var(--terracotta); margin-bottom: 12px;
+}
+
+.research-item h3 {
+  font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600;
+  color: var(--charcoal); margin-bottom: 14px; line-height: 1.35;
+}
+
+.research-item p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; }
+.research-item .r-detail { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.research-item.expanded .r-detail { max-height: 300px; }
+
+.research-item .r-more {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+  color: var(--muted-gold); margin-top: 14px; display: inline-block;
+}
+
+/* PROJECTS */
+.filter-bar { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+
+.filter-btn {
+  font-size: 0.78rem; font-weight: 500; padding: 6px 16px; border: 1px solid var(--sand);
+  background: transparent; cursor: pointer; color: var(--text-secondary);
+  transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.06em;
+}
+
+.filter-btn:hover, .filter-btn.active { border-color: var(--terracotta); color: var(--terracotta); }
+
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+@media (max-width: 900px) { .projects-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 580px) { .projects-grid { grid-template-columns: 1fr; } }
+
+.pcard {
+  border: 1px solid var(--sand); background: var(--cream); overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+.pcard::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; background: linear-gradient(90deg, var(--terracotta), var(--muted-gold));
+  transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease;
+}
+
+.pcard:hover {
+  border-color: var(--rule);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+  transform: translateY(-4px);
+}
+
+.pcard:hover::after { transform: scaleX(1); }
+
+.pcard .pcard-img {
+  transition: transform 0.4s ease;
+}
+
+.pcard:hover .pcard-img { transform: scale(1.04); }
+.pcard .pcard-img { width: 100%; height: 150px; object-fit: cover; display: block; border-bottom: 1px solid var(--sand); transition: transform 0.4s ease; }
+.pcard-body { padding: 20px; }
+
+.pcard .ptags { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+
+.pcard .ptag {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted-gold);
+}
+
+.pcard .ptag + .ptag::before { content: '/'; margin-right: 6px; color: var(--sand); }
+
+.pcard h4 {
+  font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600;
+  color: var(--charcoal); margin-bottom: 8px; line-height: 1.35;
+}
+
+.pcard .metric-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px; }
+
+.pcard .metric {
+  font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; font-weight: 500; color: var(--terracotta);
+}
+
+.pcard .metric-label { font-size: 0.72rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+.pcard p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; }
+
+.pcard .plink { font-size: 0.78rem; font-weight: 500; margin-top: 12px; display: inline-block; color: var(--terracotta); }
+.pcard .plink:hover { color: var(--deep-rust); }
+.pcard.hidden { display: none; }
+
+/* TIMELINE */
+.timeline-grid { display: grid; grid-template-columns: 140px 1fr; gap: 0; }
+
+@media (max-width: 580px) { .timeline-grid { grid-template-columns: 1fr; } }
+
+.tl-entry { display: contents; }
+
+.tl-date-col {
+  padding: 24px 20px 24px 0; border-right: 1px solid var(--sand); text-align: right;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--muted-gold); font-weight: 500;
+}
+
+@media (max-width: 580px) { .tl-date-col { border-right: none; text-align: left; padding: 24px 0 4px; } }
+
+.tl-content { padding: 24px 0 24px 28px; border-bottom: 1px solid var(--sand); }
+
+@media (max-width: 580px) { .tl-content { padding: 0 0 20px; } }
+
+.tl-content h4 {
+  font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600;
+  color: var(--charcoal); margin-bottom: 2px;
+}
+
+.tl-content .tl-place { font-size: 0.85rem; color: var(--terracotta); margin-bottom: 8px; }
+.tl-content p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
+.tl-content a { font-size: 0.8rem; font-weight: 500; }
+
+/* SKILLS */
+.skills-columns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+
+@media (max-width: 640px) { .skills-columns { grid-template-columns: 1fr; } }
+
+.skill-group h4 {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted-gold);
+  margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--sand);
+}
+
+.skill-group ul { list-style: none; }
+.skill-group li {
+  font-size: 0.88rem; color: var(--text); padding: 4px 0;
+  transition: all 0.2s ease; border-radius: 2px;
+}
+
+.skill-group li:hover { padding-left: 8px; color: var(--charcoal); }
+.skill-group li.highlight { font-weight: 600; color: var(--charcoal); }
+.skill-group li.highlight::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
+
+.skill-group:nth-child(1) li.highlight::before { background: var(--terracotta); }
+.skill-group:nth-child(2) li.highlight::before { background: var(--dusty-blue); }
+.skill-group:nth-child(3) li.highlight::before { background: var(--sage); }
+
+/* DUAL COLUMNS */
+.dual-col { display: grid; grid-template-columns: 1fr 1px 1fr; gap: 40px; align-items: start; }
+.dual-col .divider-line { background: var(--sand); width: 1px; height: 100%; min-height: 80px; }
+
+@media (max-width: 640px) {
+  .dual-col { grid-template-columns: 1fr; gap: 32px; }
+  .dual-col .divider-line { display: none; }
+}
+
+.dual-col h3 {
+  font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 600;
+  color: var(--charcoal); margin-bottom: 10px;
+}
+
+.dual-col p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 14px; }
+
+/* CERTS */
+.cert-list { list-style: none; }
+
+.cert-list li {
+  font-size: 0.9rem; padding: 10px 0; border-bottom: 1px solid var(--sand);
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap;
+}
+
+.cert-year { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--muted-gold); font-weight: 500; }
+
+/* CONTACT */
+.contact-row { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.contact-row a {
+  font-size: 0.82rem; font-weight: 500; padding: 10px 24px; border: 1.5px solid var(--charcoal);
+  color: var(--charcoal); text-transform: uppercase; letter-spacing: 0.06em; transition: all 0.25s;
+}
+
+.contact-row a:hover { background: var(--charcoal); color: var(--cream); }
+
+footer {
+  text-align: center; padding: 48px 32px; font-size: 0.78rem;
+  color: var(--text-secondary); border-top: 1px solid var(--sand);
+}
+
+footer .footer-name { font-family: 'Playfair Display', serif; font-size: 0.9rem; color: var(--charcoal); margin-bottom: 4px; }
+
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+.pcard.fade-in { transition-duration: 0.5s; }
+.pcard.fade-in:nth-child(2) { transition-delay: 0.08s; }
+.pcard.fade-in:nth-child(3) { transition-delay: 0.16s; }
+.pcard.fade-in:nth-child(4) { transition-delay: 0.24s; }
+.pcard.fade-in:nth-child(5) { transition-delay: 0.32s; }
+.pcard.fade-in:nth-child(6) { transition-delay: 0.40s; }
+.pcard.fade-in:nth-child(7) { transition-delay: 0.48s; }
+
+.tl-entry .tl-content { transition: opacity 0.5s ease; }
+
+/* active nav highlight */
+nav .nav-links a.active-section { color: var(--terracotta); }
+nav .nav-links a.active-section::after { transform: scaleX(1); transform-origin: left; }
+
+/* contact button color cycle */
+.contact-row a:nth-child(1):hover { background: var(--terracotta); border-color: var(--terracotta); color: var(--cream); }
+.contact-row a:nth-child(2):hover { background: var(--charcoal); border-color: var(--charcoal); color: var(--cream); }
+.contact-row a:nth-child(3):hover { background: var(--dusty-blue); border-color: var(--dusty-blue); color: var(--cream); }
+.contact-row a:nth-child(4):hover { background: var(--plum); border-color: var(--plum); color: var(--cream); }
+
+/* filter button active colors */
+.filter-btn[data-filter="ml"].active { border-color: var(--dusty-blue); color: var(--dusty-blue); }
+.filter-btn[data-filter="quantum"].active { border-color: var(--plum); color: var(--plum); }
+.filter-btn[data-filter="hep"].active { border-color: var(--sage); color: var(--sage); }
+
+/* metric pulse on hover */
+.pcard:hover .metric { animation: metric-pop 0.3s ease; }
+
+@keyframes metric-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* editorial divider subtle animation */
+.editorial-divider { animation: divider-fade 2s ease-in-out; }
+
+@keyframes divider-fade {
+  0% { opacity: 0; letter-spacing: 0.8em; }
+  100% { opacity: 1; letter-spacing: 0.4em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  .pcard.fade-in { transition-delay: 0s; }
+  .editorial-divider { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="name-mark">Abhipsa Acharya</span>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero" id="top">
+  <div class="wide">
+    <div class="hero-layout fade-in">
+      <div class="hero-photo-wrap">
+        <img src="assets/MyIMG.jpg" alt="Abhipsa Acharya" class="hero-photo">
+      </div>
+      <div class="hero-text">
+        <h1>Abhipsa Acharya</h1>
+        <div class="affiliation">PhD Candidate, Physics &middot; University of Alabama &middot; CMS / CERN</div>
+        <p class="abstract">
+          Searching for <em>vector-like top quarks</em> through a new neutral scalar channel at the LHC, and measuring <em>quantum entanglement</em> in boosted top pair production using Run 3 data. I work at the intersection of particle physics, deep learning, and quantum computing.
+        </p>
+        <div class="hero-links">
+          <a href="https://scholar.google.com/citations?user=JJmsBB4AAAAJ&hl=en" class="btn-outline">Publications</a>
+          <a href="https://github.com/aviiacharya" class="btn-outline">GitHub</a>
+          <a href="https://medium.com/@abhipsa_acharya" class="btn-outline">Writing</a>
+          <a href="mailto:aacharya1@crimson.ua.edu" class="btn-outline">Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="editorial-divider">&diams; &diams; &diams;</div>
+
+<section id="research">
+  <div class="wide">
+    <div class="fade-in">
+      <div class="section-eyebrow">Research</div>
+      <div class="section-heading">Current Analyses</div>
+      <div class="section-rule"></div>
+    </div>
+    <div class="research-pair fade-in">
+      <div class="research-item" onclick="this.classList.toggle('expanded')">
+        <div class="r-label">Thesis / BSM Search</div>
+        <h3>VLQ Pair Production via S<sup>0</sup> &rarr; &gamma;&gamma;</h3>
+        <p>Searching for pair-produced vector-like top quarks decaying through a new neutral scalar in the single-lepton final state at 13 TeV. The diphoton mass resonance is the primary discriminant.</p>
+        <div class="r-detail">
+          <p style="margin-top:14px;">This channel is unexplored by existing VLQ searches. I led the end-to-end pipeline from Monte Carlo signal production through BSM decay characterization to resonance-based discrimination, with planned ML-based signal extraction.</p>
+        </div>
+        <span class="r-more">Read more</span>
+      </div>
+      <div class="research-item" onclick="this.classList.toggle('expanded')">
+        <div class="r-label">Run 3 / Quantum Information</div>
+        <h3>Entanglement in Boosted t&#x0074;&#x0305; Production</h3>
+        <p>Measuring quantum entanglement at 13.6 TeV using spin correlations via the D coefficient, with a ParticleNet-based flavor tagging approach to boost spin analyzing power.</p>
+        <div class="r-detail">
+          <p style="margin-top:14px;">Built a columnar analysis framework processing terabyte-scale Run 3 data with multi-category event selection (AK8 top-tagging, b-jet classification), automated MC normalization, and Data/MC validation at 26.67 fb<sup>&minus;1</sup>.</p>
+        </div>
+        <span class="r-more">Read more</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" style="background: var(--warm-white); padding: 80px 0 64px;">
+  <div class="wide">
+    <div class="fade-in">
+      <div class="section-eyebrow">Work</div>
+      <div class="section-heading">Selected Projects</div>
+      <div class="section-rule"></div>
+    </div>
+    <div class="filter-bar fade-in">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ml">Machine Learning</button>
+      <button class="filter-btn" data-filter="quantum">Quantum</button>
+      <button class="filter-btn" data-filter="hep">HEP</button>
+    </div>
+    <div class="projects-grid">
+
+      <div class="pcard fade-in" data-tags="quantum ml hep">
+        <img src="assets/6d86890e-d4a0-4dbd-926b-1d2a10b0dcba.png" alt="Contrastive Learning" class="pcard-img">
+        <div class="pcard-body">
+          <div class="ptags"><span class="ptag">Quantum</span><span class="ptag">ML</span><span class="ptag">HEP</span></div>
+          <h4>Hybrid Quantum-Classical Contrastive Learning for Jet Classification</h4>
+          <div class="metric-row"><span class="metric">0.858</span><span class="metric-label">AUC (6-qubit, 54 params)</span></div>
+          <p>PointVector encoder with variational quantum circuit, SimCLR pretraining on 100k Pythia8 jets. Within 0.4% of classical baseline using 15x fewer parameters.</p>
+          <a href="https://github.com/aviiacharya/Contrastive_Learning" class="plink">View code &rarr;</a>
+        </div>
+      </div>
+
+      <div class="pcard fade-in" data-tags="ml hep">
+        <div class="pcard-body">
+          <div class="ptags"><span class="ptag">ML</span><span class="ptag">HEP</span></div>
+          <h4>Photon/Electron Classification with and without Tracker</h4>
+          <div class="metric-row"><span class="metric">97%</span><span class="metric-label">CNN accuracy (with tracker)</span></div>
+          <p>CNN classifier for CMS ECAL images, 97% with tracker info and 86% without, probing tracker dependency in e/&gamma; separation.</p>
+          <a href="https://github.com/aviiacharya/Electron-and-Photon-classification-using-NNs-with-and-without-detector-tracker-info" class="plink">View code &rarr;</a>
+        </div>
+      </div>
+
+      <div class="pcard fade-in" data-tags="quantum">
+        <img src="assets/1489615804-teleportation.gif" alt="Quantum Teleportation" class="pcard-img">
+        <div class="pcard-body">
+          <div class="ptags"><span class="ptag">Quantum</span></div>
+          <h4>Quantum Simulation of Space Telescopes</h4>
+          <div class="metric-row"><span class="metric">JWST</span><span class="metric-label">Womanium Hackathon</span></div>
+          <p>Quantum teleportation model for satellite-to-Earth communication using entangled photonic qubits in sun-synchronous orbit.</p>
+          <a href="https://github.com/aviiacharya/Predict-the-orbit-of-the-James-Webb-space-telescope-with-a-quantum-algorithm---Herman-Kolden" class="plink">View code &rarr;</a>
+        </div>
+      </div>
+
+      <div class="pcard fade-in" data-tags="ml quantum">
+        <div class="pcard-body">
+          <div class="ptags"><span class="ptag">ML</span><span class="ptag">Quantum</span></div>
+          <h4>ML for Quantum Spin Interactions in NMR</h4>
+          <div class="metric-row"><span class="metric">20%</span><span class="metric-label">Correlation improvement</span></div>
+          <p>Neural networks predicting spin-interaction variables from NMR simulations, optimized across 12,000 evaluation curves.</p>
+          <a href="https://github.com/aviiacharya/Machine-Learning-Models-for-Predicting-Quantum-Spin-Interactions-in-NMR-Simulations" class="plink">View code &rarr;</a>
+        </div>
+      </div>
+
+      <div class="pcard fade-in" data-tags="ml hep">
+        <img src="assets/higgs.png" alt="Higgs boson" class="pcard-img">
+        <div class="pcard-body">
+          <div class="ptags"><span class="ptag">ML</span><span class="ptag">HEP</span></div>
+          <h4>Higgs Boson Signal Classification</h4>
+          <div class="metric-row"><span class="metric">87%</span><span class="metric-label">ROC AUC</span></div>
+          <p>BDT (400 estimators) and 7-layer DNN on 11M samples distinguishing Higgs signal from background.</p>
+          <a href="https://github.com/aviiacharya/Higgs-Boson-Signal-Classification-using-Machine-Learning" class="plink">View code &rarr;</a>
+        </div>
+      </div>
+
+      <div class="pcard fade-in" data-tags="ml hep">
+        <img src="assets/tree.png" alt="Decision Tree" class="pcard-img">
+        <div class="pcard-body">
+          <div class="ptags"><span class="ptag">ML</span><span class="ptag">HEP</span></div>
+          <h4>Deep CNN for ECAL Particle ID</h4>
+          <div class="metric-row"><span class="metric">0.81</span><span class="metric-label">ROC AUC, 12-layer CNN</span></div>
+          <p>400k detector images, 868k parameters, photon vs electron classification with adaptive LR scheduling.</p>
+          <a href="https://github.com/aviiacharya/High-Energy-Particle-Classification-with-Deep-Convolutional-Neural-Networks" class="plink">View code &rarr;</a>
+        </div>
+      </div>
+
+      <div class="pcard fade-in" data-tags="ml">
+        <img src="assets/sales-data-portfolio-image.jpg" alt="Sales Analysis" class="pcard-img">
+        <div class="pcard-body">
+          <div class="ptags"><span class="ptag">ML</span></div>
+          <h4>Sales Data Analysis Using Pandas</h4>
+          <div class="metric-row"><span class="metric">18k+</span><span class="metric-label">Rows processed</span></div>
+          <p>Automated pipeline for cleaning, transformation, and analysis. Identified 35% sales spike during peak hours and product bundling opportunities.</p>
+          <a href="https://github.com/aviiacharya/Sales-Data-Analysis-Pandas" class="plink">View code &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="narrow">
+    <div class="fade-in">
+      <div class="section-eyebrow">Journey</div>
+      <div class="section-heading">Experience &amp; Education</div>
+      <div class="section-rule"></div>
+    </div>
+    <div class="timeline-grid">
+      <div class="tl-entry fade-in">
+        <div class="tl-date-col">2021 &mdash; present</div>
+        <div class="tl-content">
+          <h4>Graduate Researcher</h4>
+          <div class="tl-place">University of Alabama / CMS, CERN</div>
+          <p>VLQ search, entanglement measurement, E2E deep learning for Higgs regression, HGCAL dew-point monitoring system. Ph.D. expected 2028.</p>
+        </div>
+      </div>
+      <div class="tl-entry fade-in">
+        <div class="tl-date-col">2019 &mdash; 2021</div>
+        <div class="tl-content">
+          <h4>Student Researcher</h4>
+          <div class="tl-place">CERN NA61/SHINE</div>
+          <p>Intermittency analysis for QGP critical point search. Pb-Pb collision simulations, tracking software development.</p>
+          <a href="https://indico.cern.ch/event/1048050/contributions/4403020/attachments/2261228/3840950/Collab_Release_Abhipsa(1).pdf">Preliminary release &rarr;</a>
+        </div>
+      </div>
+      <div class="tl-entry fade-in">
+        <div class="tl-date-col">Summer 2019</div>
+        <div class="tl-content">
+          <h4>Research Intern</h4>
+          <div class="tl-place">IISER, India</div>
+          <p>UrQMD simulations of K*(892) and &phi;(1020) meson production in Au-Au collisions at &radic;s<sub>NN</sub> = 200 GeV.</p>
+          <a href="https://drive.google.com/file/d/0B-xQ8sSxBLknZzEzMUxsb1JicksxbFh2WVBPUThxS0dScEtz/view?usp=sharing&resourcekey=0-opaBP2Dh5jMFLs-_yahnYw">Project report &rarr;</a>
+        </div>
+      </div>
+      <div class="tl-entry fade-in">
+        <div class="tl-date-col">Summer 2018</div>
+        <div class="tl-content">
+          <h4>Research Intern</h4>
+          <div class="tl-place">NISER, India</div>
+          <p>Three-flavor neutrino oscillation detection, GEANT-4 simulations.</p>
+          <a href="https://drive.google.com/file/d/0B-xQ8sSxBLknQ0dmNmlzN1dUOUllaXFLZEVRSV91aVVvcmVB/view?usp=sharing&resourcekey=0-_gURPnwVPOKg7uKtcuqogg">Project report &rarr;</a>
+        </div>
+      </div>
+      <div class="tl-entry fade-in">
+        <div class="tl-date-col">2017 &mdash; 2019</div>
+        <div class="tl-content">
+          <h4>M.S. Physics</h4>
+          <div class="tl-place">Odisha University of Agriculture and Technology</div>
+          <a href="https://drive.google.com/file/d/1H5xK6hwNT2X3dFbX-xBKyLf0fzAcHjFq/view?usp=sharing">Thesis report &rarr;</a>
+        </div>
+      </div>
+      <div class="tl-entry fade-in">
+        <div class="tl-date-col">2014 &mdash; 2017</div>
+        <div class="tl-content">
+          <h4>B.S. Physics</h4>
+          <div class="tl-place">Utkal University</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background: var(--warm-white); padding: 80px 0 64px;">
+  <div class="wide">
+    <div class="fade-in">
+      <div class="section-eyebrow">Toolkit</div>
+      <div class="section-heading">Technical Skills</div>
+      <div class="section-rule"></div>
+    </div>
+    <div class="skills-columns fade-in">
+      <div class="skill-group">
+        <h4>Languages &amp; Frameworks</h4>
+        <ul>
+          <li class="highlight">Python</li>
+          <li class="highlight">C++</li>
+          <li>C, Fortran</li>
+          <li class="highlight">PyTorch</li>
+          <li>TensorFlow, Keras</li>
+          <li>Matlab, Mathematica</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>HEP &amp; ML</h4>
+        <ul>
+          <li class="highlight">ROOT, CMSSW, Coffea</li>
+          <li>NanoAOD-tools</li>
+          <li class="highlight">ParticleNet</li>
+          <li>DNN / CNN / Transformer</li>
+          <li>Diffusion Models, ViT</li>
+          <li>Monte Carlo, Statistical Analysis</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Quantum &amp; Infrastructure</h4>
+        <ul>
+          <li class="highlight">Qiskit</li>
+          <li>D-Wave, Pennylane</li>
+          <li>HTCondor, CRAB, Slurm</li>
+          <li>LPC / LXplus, SWAN</li>
+          <li>Docker, Git, Linux</li>
+          <li>LaTeX, Beamer</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="writing">
+  <div class="narrow">
+    <div class="fade-in">
+      <div class="section-eyebrow">Words</div>
+      <div class="section-heading">Publications &amp; Writing</div>
+      <div class="section-rule"></div>
+    </div>
+    <div class="dual-col fade-in">
+      <div>
+        <h3>Physics</h3>
+        <p>CMS author. Publications in collider phenomenology, ML for HEP, and quantum computing applications.</p>
+        <a href="https://scholar.google.com/citations?user=JJmsBB4AAAAJ&hl=en" class="plink">Google Scholar &rarr;</a>
+      </div>
+      <div class="divider-line"></div>
+      <div>
+        <h3>Poetry &amp; Philosophy</h3>
+        <p>I also write. Mostly about the things physicists think about when they are not doing physics.</p>
+        <a href="https://medium.com/@abhipsa_acharya" class="plink">Read on Medium &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certs" style="background: var(--warm-white); padding: 80px 0 64px;">
+  <div class="narrow">
+    <div class="fade-in">
+      <div class="section-eyebrow">Recognition</div>
+      <div class="section-heading">Awards &amp; Certifications</div>
+      <div class="section-rule"></div>
+    </div>
+    <ul class="cert-list fade-in">
+      <li>ML4SCI Hackathon Competition Winner <span class="cert-year">2020</span></li>
+      <li>Womanium QWorld Quantum Computing Diploma <span class="cert-year">2022</span></li>
+      <li>Best Startup Idea, Womanium x QWorld Hackathon <span class="cert-year">2022</span></li>
+      <li>Womanium Quantum Hardware Certificate <span class="cert-year">2022</span></li>
+      <li>UJK Doctoral Forum Certificate <span class="cert-year">2020</span></li>
+      <li>Odisha Medhabruti Award <span class="cert-year">2017</span></li>
+      <li>Programme On Young Graduates For Leadership In Biotechnology <span class="cert-year">2017</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="narrow">
+    <div class="fade-in">
+      <div class="section-eyebrow">Reach out</div>
+      <div class="section-heading">Contact</div>
+      <div class="section-rule"></div>
+    </div>
+    <div class="contact-row fade-in">
+      <a href="mailto:aacharya1@crimson.ua.edu">Email</a>
+      <a href="https://github.com/aviiacharya">GitHub</a>
+      <a href="https://www.linkedin.com/in/abhipsa-acharya-1abba71a4/">LinkedIn</a>
+      <a href="https://www.instagram.com/travel_with_abhipsa/">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-name">Abhipsa Acharya</div>
+  University of Alabama &middot; CMS / CERN
+</footer>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.pcard').forEach(card => {
+      card.classList.toggle('hidden', f !== 'all' && !card.dataset.tags.includes(f));
+    });
+  });
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'));
+});
+
+// scroll spy for nav
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active-section', a.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+
+</body>
+</html>
