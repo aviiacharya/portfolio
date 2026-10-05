@@ -5,7 +5,7 @@
 My research focuses on two analyses with the CMS experiment at the LHC. I am searching for pair-produced vector-like top quarks decaying through a new neutral scalar S0 (S0 → γγ) in the single-lepton final state at 13 TeV, targeting a channel unexplored by existing VLQ searches and using the diphoton mass resonance as the main discriminant. Separately, I am measuring quantum entanglement in boosted top quark pair production at 13.6 TeV using Run 3 data, extracting spin correlations via the D coefficient and developing a ParticleNet-based flavor tagging approach to improve the spin analyzing power.
 
 #### Technical Skills: Python, C++, C, Fortran, PyTorch, TensorFlow, Keras, Qiskit, D-Wave, Pennylane, ROOT, CMSSW, Coffea, NanoAOD-tools, ParticleNet, DNN/CNN/RNN/Transformer architectures, Diffusion models, Vision Transformers, Statistical Analysis, Big Data Processing, Monte Carlo Simulation, HTCondor, CRAB, Slurm, LPC/LXplus, SWAN, Matlab, Mathematica, LaTeX, Beamer, Docker, Git, Linux/Unix, Anaconda
-#### Special Skills : Name it and give me 3 days.
+
 
 ## Education
 - Ph.D, Physics | The University of Alabama ,Tuscaloosa (_April 2028_)			
